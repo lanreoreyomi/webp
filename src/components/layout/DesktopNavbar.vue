@@ -36,7 +36,7 @@ export default {
   name: "desktop_navbar",
   data() {
     return {
-      logoImg: require('../../assets/Image/white_logo.svg'),
+      logoImg: require('../../assets/Image/blueLogo.svg'),
       scrollPosition: null
     }
   },
@@ -49,7 +49,7 @@ export default {
       if (this.scrollPosition > 800) {
         this.logoImg = require('../../assets/Image/blueLogo.svg')
       } else {
-        this.logoImg = require('../../assets/Image/white_logo.svg');
+        this.logoImg = require('../../assets/Image/blueLogo.svg');
       }
     },
   },
@@ -73,8 +73,7 @@ export default {
     background: white !important;
     ul {
       li {
-        background: lighten(#7f8fa6, 30%) !important;
-        a {
+         a {
           color: $headerColor !important ;
         }
         &:hover{
@@ -90,7 +89,7 @@ export default {
     top: 0;
     z-index: 999;
     width: 100%;
-    background: $headerColor;
+    background: $bg-fill;
      #nav-logo {
       width: 35%;
       padding: 20px;
@@ -104,7 +103,7 @@ export default {
       margin: 0 auto;
       width: 65%;
       display: flex;
-       ul {
+      ul {
         width: 80%;
         margin: 0 auto;
         display: flex;
@@ -115,7 +114,7 @@ export default {
           @include Button();
           width: 150px;
           a {
-            color: white;
+            color: $headerColor;
             font-family: 'Poppins', sans-serif;
             text-align: center;
             cursor: pointer;
@@ -123,7 +122,7 @@ export default {
             &:hover {
               text-decoration: none;
               text-underline: none;
-              color: #7f8fa6;
+              color: $textColor;
             }
           }
           .router-link-active {

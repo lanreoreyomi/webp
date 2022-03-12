@@ -3,8 +3,7 @@
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  color: $alt-bg;
-  background: #0a1157;
+  color: $textColor;
   font-family: 'Poppins', sans-serif;
   width: 35%;
   letter-spacing: 2px;
@@ -94,10 +93,10 @@
   font-family: $headerFont2;
   transition: width 0.8s ease;
   outline: none;
-  border: none;
+  border: 1px solid black;
   margin-top: 5px;
   &:focus {
-    border: 1px solid $headerColor;
+    border: 2px solid $headerColor;
     width: 400px;
     -webkit-box-shadow: 0px -1px 12px 7px rgba(255, 255, 255, 1.0);
     box-shadow: 0px -1px 12px 7px rgba(223, 228, 234, 1.0);

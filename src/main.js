@@ -1,21 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueScrollTo from 'vue-scrollto'
-import VueCarousel from 'vue-carousel';
-import VueMeta from 'vue-meta';
+ import VueMeta from 'vue-meta';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
+const app = createApp(App);
+app.AOS = new AOS.init({ disable: "phone" });
 
-createApp(App).use(router,(VueScrollTo,{
-	container: "body",
-	duration: 500,
-	easing: "ease",
-	offset: 0,
-	force: true,
-	cancelable: true,
-	onStart: false,
-	onDone: false,
-	onCancel: false,
-	x: false,
-	y: true
-}), VueCarousel, VueMeta).mount('#app')
+app.use(router, VueMeta, AOS).mount("#app");
