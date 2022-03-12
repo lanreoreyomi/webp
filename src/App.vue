@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div id="nav">
+      <div class="desktop">
+        <desktop_navbar/>
+      </div>
+      <div class="mobile">
+        <mobile_navbar/>
+      </div>
+
+    </div>
+    <router-view />
+  </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import desktop_navbar from '@/components/layout/DesktopNavbar.vue'
+import mobile_navbar from '@/components/layout/MobileNav.vue'
 export default {
-  name: 'App',
+  data() {
+    return {
+      mobileView: 0,
+      showNav: false,
+    }
+  },
   components: {
-    HelloWorld
-  }
+    desktop_navbar,
+    mobile_navbar,
+  },
+  methods: {
+    handleView() {
+      this.mobileView = window.innerWidth;
+    }
+  },
+  created() {
+    this.handleView();
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "src/assets/Styles/colors";
+.html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  line-height: 35px;
+ }
 </style>
