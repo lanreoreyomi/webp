@@ -275,7 +275,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     .skillSection1 {
-      background: $alt-bg;
+      background: $white_text;
       clip-path: polygon(0 0, 94.6% 0, 3% 100%, 0% 100%);
     }
     .skillSection2 {
@@ -425,7 +425,7 @@ export default {
             "b b b";
       .skillSection1 {
         grid-area: a;
-        background: $alt-bg;
+        background: $white_text;
         clip-path: polygon(0 0, 94.6% 0, 3% 100%, 0% 100%);
       }
       .skillSection2 {
@@ -482,7 +482,7 @@ export default {
             "b b b";
       .skillSection1 {
         grid-area: a;
-        background: $alt-bg;
+        background: $white_text;
         clip-path: polygon(0 0, 94.6% 0, 3% 100%, 0% 100%);
       }
       .skillSection2 {

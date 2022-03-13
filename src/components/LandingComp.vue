@@ -64,7 +64,7 @@ export default {
     .leftSectionText {
       h1 {
         font-size: 50px;
-        color: $alt-bg;
+        color: $white_text;
         font-family: $headerFont;
         margin-top: 10vh;
         .name_highlight {
@@ -96,12 +96,12 @@ export default {
     @include Button();
     border-radius: 0;
     padding: 15px;
-    background: $alt-bg;
+    background: $white_text;
     color: #0a1157;
     &:hover {
       transition: all 0.2s;
       background: lighten($textColor, 10%);
-      color: $alt-bg;
+      color: $white_text;
     }
   }
 }

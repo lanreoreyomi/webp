@@ -41,9 +41,9 @@
     </div>
 
     <div class="contact_dtl">
-      <h2>How can we help? </h2>
+      <h2>Send us a message </h2>
       <br>
-      <br>
+
       <h3>Web Development </h3>
       <p>Get free quote for website development</p>
       <hr>

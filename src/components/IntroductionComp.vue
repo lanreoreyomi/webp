@@ -341,7 +341,7 @@ export default {
         .btn {
           margin: 10px;
           text-transform: uppercase;
-          background: lighten($alt-bg, 20%);
+          background: lighten($white_text, 20%);
           color: $textColor;
           font-weight: 700 !important;
           letter-spacing: 3px;
@@ -350,7 +350,7 @@ export default {
           cursor: pointer;
           &:hover {
             background: white;
-            color: $alt-bg;
+            color: $white_text;
             -webkit-box-shadow: 0 5px 40px -10px #18071B;
             -moz-box-shadow: 0 5px 40px -10px #18071B;
             transition: all 0.3s ease 0s;

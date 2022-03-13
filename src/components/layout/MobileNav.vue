@@ -285,7 +285,7 @@ export default {
             justify-content: center;
             text-align: center !important;
             text-transform: uppercase;
-            color: $alt-bg;
+            color: $white_text;
             background: #0a1157;
             font-family: 'Poppins', sans-serif;
             width: 80%;
