@@ -25,7 +25,7 @@
       display: flex;
       margin: 20px auto;
       width: 200px;
-      border: 2px solid black;
+      border: 1px solid black;
       justify-content: center;
       padding: 10px;
       a {
@@ -94,10 +94,10 @@
   font-family: $headerFont2;
   transition: width 0.8s ease;
   outline: none;
-  border: 1px solid black;
+  border: 0 ;
   margin-top: 5px;
   &:focus {
-    border: 2px solid $headerColor;
+    border: 1px solid $headerColor;
     width: 400px;
     -webkit-box-shadow: 0px -1px 12px 7px rgba(255, 255, 255, 1.0);
     box-shadow: 0px -1px 12px 7px rgba(223, 228, 234, 1.0);
