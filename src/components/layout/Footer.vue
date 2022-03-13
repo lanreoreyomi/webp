@@ -1,13 +1,11 @@
 <template>
   <div class="footer">
-//TODO: Check for attributions for used icons
+<!--TODO: Check for attributions for used icons-->
     <h4> &#169; {{getFullYear()}} WebPexels
-      <br>
+
       <a href="https://icons8.com/"   target="_blank">Icons8.com</a>
-      <br>
-      <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by Freepik - Flaticon</a>
-      <a href='https://www.freepik.com/photos/wireframe-background'>Wireframe background photo created by rawpixel.com - www.freepik.com</a>
-    </h4>
+
+      </h4>
   </div>
 </template>
 
