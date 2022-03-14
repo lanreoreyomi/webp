@@ -1,5 +1,5 @@
 <template>
-  <div class="our-services">
+  <div class="our-services" id="services">
     <!--TODO: Turn card into a component-->
     <div class="services_con " data-aos="fade-up">
       <div class="services_img">
@@ -11,11 +11,11 @@
           modern web development technologies and frameworks.</h3>
         <div class="contact_us">
           <div class="cardContact ccEmail">
-            <a href="">Request Quote</a>
+            <a href="#" v-scroll-to="'#contact'">Request Quote</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png" alt=""/>
           </div>
           <div class="cardContact ccCall">
-            <a href="">Call Now</a>
+            <a href="tel:+16136003820">Call Now</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png" alt=""/>
           </div>
         </div>
@@ -34,11 +34,11 @@
           push to your website? We are here for you.</h3>
         <div class="contact_us">
           <div class="cardContact ccEmail">
-            <a href="">Request Quote</a>
+            <a href="" v-scroll-to="'#contact'">Request Quote</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png" alt=""/>
           </div>
           <div class="cardContact ccCall">
-            <a href="">Call Now</a>
+            <a href="tel:+16136003820">Call Now</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png" alt=""/>
           </div>
         </div>
@@ -57,11 +57,11 @@
         </h3>
         <div class="contact_us">
           <div class="cardContact ccEmail">
-            <a href="">Request Quote</a>
+            <a href="" v-scroll-to="'#contact'">Request Quote</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png" alt=""/>
           </div>
           <div class="cardContact ccCall">
-            <a href="">Call Now</a>
+            <a href="tel:+16136003820">Call Now</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png" alt=""/>
           </div>
         </div>
@@ -82,10 +82,10 @@
 
         <div class="contact_us">
           <div class="cardContact ccEmail">
-            <a href="">Request Quote</a>
+            <a href="" v-scroll-to="'#contact'">Request Quote</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png"/>
           </div>
-          <div class="cardContact ccCall"><a href="">Call Now</a>
+          <div class="cardContact ccCall"><a href="tel:+16136003820">Call Now</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png"/>
 
           </div>
@@ -105,11 +105,11 @@
           knowing what content to show on what section of your website.</h3>
         <div class="contact_us">
           <div class="cardContact ccEmail">
-            <a href="">Request Quote</a>
+            <a href="" v-scroll-to="'#contact'">Request Quote</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png"/>
           </div>
           <div class="cardContact ccCall">
-            <a href="">Call Now</a>
+            <a href="tel:+16138003820">Call Now</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png"/>
           </div>
         </div>
@@ -127,15 +127,13 @@
           private email, DNS and everything your websites needs to be alive.</h3>
         <div class="contact_us">
           <div class="cardContact ccEmail">
-
-            <a href="">Request Quote</a>
-
+            <a href="" v-scroll-to="'#contact'">Request Quote</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png"/>
 
           </div>
           <div class="cardContact ccCall">
 
-            <a href="">Call Now</a>
+            <a href="tel:+16136003820">Call Now</a>
             <img src="https://img.icons8.com/ios-glyphs/ffffff/long-arrow-right.png"/>
 
           </div>
@@ -201,6 +199,8 @@ export default {
         font-size: 50px;
         line-height: 80px;
         margin-top: 5vh;
+        text-shadow: 2px 2px #F39906;
+
       }
 
       h3 {

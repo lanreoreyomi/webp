@@ -8,14 +8,14 @@
       <div id="nav-items">
         <ul>
           <li>
-            <router-link :to="{name: 'Home'}" class="router-link" >Home</router-link>
+            <router-link :to="{name: 'Home'}" class="router-link"  v-scroll-to="'#desktopNav'">Home</router-link>
           </li>
 
           <li @click="toggleMenu=!toggleMenu">
-            <a class="button1">About </a>
+            <a class="button1"  v-scroll-to="'#services'" >About </a>
           </li>
           <li @click="toggleMenu=!toggleMenu">
-            <a class="button1">Projects </a>
+            <a class="button1"  v-scroll-to="'#projects'">Projects </a>
           </li>
           <!--          <li id="career-li">-->
           <!--            <router-link :to="{name: 'Portfolio'}" class="router-link  career" v-scroll-to="'#home-c'">Portfolio-->
