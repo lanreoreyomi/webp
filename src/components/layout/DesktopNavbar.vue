@@ -94,7 +94,7 @@ export default {
       width: 35%;
       padding: 20px;
       img {
-        width: 150px;
+        width: 250px;
         padding: 0;
         margin: 0;
       }

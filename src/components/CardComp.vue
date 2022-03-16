@@ -3,7 +3,7 @@
     <!--TODO: Turn card into a component-->
     <div class="services_con " data-aos="fade-up">
       <div class="services_img">
-        <img src="../assets/Image/3d1.jpeg" alt="java">
+        <img src="../assets/Image/develop.svg" alt="java">
       </div>
       <div class="services_desc">
         <h2>Website Development</h2>
@@ -25,7 +25,7 @@
     </div>
     <div class="services_con" data-aos="fade-up">
       <div class="services_img">
-        <img src="../assets/Image/3d2.jpeg" alt="java">
+        <img src="../assets/Image/maintainance.svg" alt="java">
       </div>
       <div class="services_desc">
         <h2>Website Maintenance</h2>
@@ -48,7 +48,7 @@
     </div>
     <div class="services_con" data-aos="fade-up">
       <div class="services_img">
-        <img src="../assets/Image/3d3.jpeg" alt="java">
+        <img src="../assets/Image/design.svg" alt="java">
       </div>
       <div class="services_desc">
         <h2>Mobile App Development</h2>
@@ -71,7 +71,7 @@
     </div>
     <div class="services_con" data-aos="fade-up">
       <div class="services_img">
-        <img src="../assets/Image/3d4.jpeg" alt="java">
+        <img src="../assets/Image/deploy.svg" alt="java">
       </div>
       <div class="services_desc">
         <h2>SEO Optimization</h2>
@@ -96,13 +96,12 @@
     </div>
     <div class="services_con" data-aos="fade-up">
       <div class="services_img">
-        <img src="../assets/Image/3d5.jpeg" alt="java">
+        <img src="../assets/Image/analysis.svg" alt="java">
       </div>
       <div class="services_desc">
-        <h2>Google Analytics/Business</h2>
+        <h2>Google Analytics</h2>
         <h3>We will analyze your website traffic. This data are transformed to a business model which
-          will help you make smarter business decision,
-          knowing what content to show on what section of your website.</h3>
+          will help you make smarter business decision.</h3>
         <div class="contact_us">
           <div class="cardContact ccEmail">
             <a href="" v-scroll-to="'#contact'">Request Quote</a>
@@ -119,7 +118,7 @@
     </div>
     <div class="services_con" data-aos="fade-up">
       <div class="services_img">
-        <img src="../assets/Image/3d6.jpeg" alt="java">
+        <img src="../assets/Image/domain-names.svg" alt="java">
       </div>
       <div class="services_desc">
         <h2>Domain Registration</h2>
@@ -181,7 +180,6 @@ export default {
       img {
         max-width: 100%;
         min-height: 100%;
-        background: $textColor;
         border-radius: 1rem;
       }
     }
@@ -199,7 +197,7 @@ export default {
         font-size: 50px;
         line-height: 80px;
         margin-top: 5vh;
-        text-shadow: 2px 2px #F39906;
+
 
       }
 
@@ -211,11 +209,14 @@ export default {
         margin-top: 3vh;
       }
     }
+
     .contact_us {
       @include buttons;
+
     }
   }
 }
+
 @media (max-width: 768px) {
   .our-services {
     width: 100%;
