@@ -3,10 +3,10 @@
     <div class="booking_text">
       <h2>Have a conversation</h2>
       <p>with Lanre</p>
-      <p class="dates">{{getCurrentDate()}}</p>
+      <p class="dates">{{ getCurrentDate() }}</p>
     </div>
     <div class="calendly-inline-widget" data-url="https://calendly.com/webpexels/60min"
-         style="min-width:320px;height:560px; "></div>
+         style="min-width:320px;height:780px; "></div>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 
     this.getCurrentDate();
   },
-  methods:{
+  methods: {
     getCurrentDate() {
       let dates = new Date()
       console.log(dates.getFullYear())
@@ -45,7 +45,7 @@ export default {
   width: 80%;
   margin: 10vh auto;
 
-  .booking_text{
+  .booking_text {
     border-bottom-left-radius: 2rem;
     border-top-left-radius: 2rem;
     background: lighten($textColor, 10%);
@@ -54,19 +54,22 @@ export default {
     -webkit-box-shadow: 0px -1px 12px 7px rgba(255, 255, 255, 1.0);
     box-shadow: 0px -1px 12px 7px rgba(223, 228, 234, 1.0);
     position: relative;
-    h2{
+
+    h2 {
       color: $bg-fill;
       font-size: 50px;
       line-height: 70px;
       margin-top: 15vh;
     }
-    p{
+
+    p {
       font-family: 'Poppins', sans-serif;
       color: $bg-fill;
       font-size: 20px;
       margin-top: 20px;
     }
-    .dates{
+
+    .dates {
       position: absolute;
       bottom: 20px;
       right: 20px;
@@ -76,5 +79,127 @@ export default {
     }
   }
 }
+
+@media all and(max-width: 480px) {
+  .booking {
+
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    margin: 2vh auto;
+
+    .booking_text {
+      padding: 10px;
+      border: unset;
+      border-top: 40px solid lighten($textColor, 20%);
+      border-radius: unset;
+
+      h2 {
+        color: $bg-fill;
+        font-size: 50px;
+        line-height: 70px;
+        margin-top: 5vh;
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        color: $bg-fill;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .dates {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+
+      }
+    }
+  }
+
+}
+
+
+@media all and(max-width: 480px) {
+  .booking {
+
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    margin: 2vh auto;
+
+    .booking_text {
+      padding: 10px;
+      border: unset;
+      border-top: 40px solid lighten($textColor, 20%);
+      border-radius: unset;
+
+      h2 {
+        color: $bg-fill;
+        font-size: 50px;
+        line-height: 70px;
+        margin-top: 5vh;
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        color: $bg-fill;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .dates {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+
+      }
+    }
+  }
+
+}
+
+@media all and (max-width: 1279px) {
+  .booking {
+
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    margin: 12vh auto;
+
+    .booking_text {
+      display: none;
+      padding: 10px;
+      border-top: 40px solid;
+      border-radius: unset;
+
+      h2 {
+        color: $bg-fill;
+        font-size: 50px;
+        line-height: 70px;
+        margin-top: 5vh;
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        color: $bg-fill;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .dates {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+
+      }
+    }
+  }
+
+}
+
 
 </style>

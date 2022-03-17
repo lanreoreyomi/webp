@@ -24,8 +24,8 @@ export default {
 @import "src/assets/Styles/colors";
 .footer {
   position: relative;
-  height: 20vh;
-  background: $headerColor;
+  height: 30vh;
+  background: $textColor;
   background-size: 100% 100%;
   margin: 0;
   padding: 0;

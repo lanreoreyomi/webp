@@ -1,7 +1,8 @@
 <template>
   <div class="our-services" id="services">
     <!--TODO: Turn card into a component-->
-    <div class="services_con " data-aos="fade-up">
+    <!--    data-aos="fade-up"-->
+    <div class="services_con ">
       <div class="services_img">
         <img src="../assets/Image/develop.svg" alt="java">
       </div>
@@ -23,7 +24,7 @@
       </div>
 
     </div>
-    <div class="services_con" data-aos="fade-up">
+    <div class="services_con">
       <div class="services_img">
         <img src="../assets/Image/maintainance.svg" alt="java">
       </div>
@@ -46,7 +47,7 @@
       </div>
 
     </div>
-    <div class="services_con" data-aos="fade-up">
+    <div class="services_con">
       <div class="services_img">
         <img src="../assets/Image/design.svg" alt="java">
       </div>
@@ -69,7 +70,7 @@
       </div>
 
     </div>
-    <div class="services_con" data-aos="fade-up">
+    <div class="services_con">
       <div class="services_img">
         <img src="../assets/Image/deploy.svg" alt="java">
       </div>
@@ -94,7 +95,7 @@
       </div>
 
     </div>
-    <div class="services_con" data-aos="fade-up">
+    <div class="services_con">
       <div class="services_img">
         <img src="../assets/Image/analysis.svg" alt="java">
       </div>
@@ -116,7 +117,7 @@
       </div>
 
     </div>
-    <div class="services_con" data-aos="fade-up">
+    <div class="services_con">
       <div class="services_img">
         <img src="../assets/Image/domain-names.svg" alt="java">
       </div>
@@ -157,7 +158,7 @@ export default {
 
 .our-services {
   width: 90%;
-  margin: 0 auto 10vh;
+  margin: 0 auto 0;
   padding: 50px;
   background: $bg-fill;
 
@@ -190,8 +191,10 @@ export default {
       text-align: start;
       color: #747d8c;
       margin-top: 7vh;
+      font-size: 14px;
 
       h2 {
+        text-align: center;
         color: black;
         font-family: 'Coda', cursive;
         font-size: 50px;
@@ -202,6 +205,7 @@ export default {
       }
 
       h3 {
+        text-align: center;
         font-weight: unset;
         line-height: 30px;
         opacity: 0.9;
@@ -217,39 +221,156 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media all and(max-width: 480px) {
   .our-services {
-    width: 100%;
-    margin: 0 auto 10vh !important;
-    grid-template-columns: 1fr;
+    padding: 0px;
+    width: 100% !important;
 
     .services_con {
-      width: 100%;
+      margin: 0 auto;
+      grid-template-areas: " a a a"
+      "b b b";
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .services_img {
+
+        grid-area: a;
+        text-align: center;
+        margin: 0 auto;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .services_desc {
+        font-family: 'poppins', cursive;
+        font-size: 14px;
+        margin-top: 4vh auto;
+        grid-area: b;
+
+        h2 {
+          font-size: 40px;
+          line-height: 60px;
+          margin-top: 2vh;
+
+
+        }
+
+
+      }
+
+      .contact_us {
+        @include responsiveButtons;
+
+      }
     }
   }
 }
 
-@media only screen and (min-device-width: 772px) and (max-device-width: 1024px) {
+
+@media all and(min-width: 480px) and (max-width: 768px) {
   .our-services {
-    width: 95%;
-    grid-template-columns: 1fr;
+    padding: 0px;
+    width: 100% !important;
 
     .services_con {
-      padding: 10px;
-      width: 100%;
+      margin: 0 auto;
+      grid-template-areas: " a a a"
+      "b b b";
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .services_img {
+        width: 100%;
+        grid-area: a;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 !important;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .services_desc {
+        font-family: 'poppins', cursive;
+        font-size: 14px;
+        //margin-top: 2vh auto;
+        grid-area: b;
+        padding-left: 0;
+        margin: 0 !important;
+
+        h2 {
+          font-size: 30px;
+          line-height: 60px;
+          margin-top: 2vh;
+
+
+        }
+
+
+      }
+
+      .contact_us {
+        @include responsiveButtons;
+
+      }
     }
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and(-webkit-min-device-pixel-ratio: 2) {
+@media all and(min-width: 769px) and (max-width: 1261px) {
   .our-services {
-    width: 100%;
-    padding: 60px !important;
-    grid-template-columns: 1fr  1fr;
+    padding: 0px;
+    width: 100% !important;
 
     .services_con {
-      width: 100%;
+      margin: 5vh auto;
+      grid-template-areas: " a a a"
+      "b b b";
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .services_img {
+        width: 100%;
+        grid-area: a;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 !important;
+
+        img {
+         width: 60%;
+        }
+      }
+
+      .services_desc {
+        font-family: 'poppins', cursive;
+        font-size: 14px;
+        //margin-top: 2vh auto;
+        grid-area: b;
+        padding-left: 0;
+        margin: 0 !important;
+
+        h2 {
+          font-size: 30px;
+          line-height: 60px;
+          margin-top: 2vh;
+
+
+        }
+
+
+      }
+
+      .contact_us {
+        @include buttons;
+
+      }
     }
   }
 }
+
+
 </style>

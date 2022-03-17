@@ -3,12 +3,12 @@
   <div id="desktopNav">
     <div class="navbar" :class="{db: scrollPosition>800}">
       <div id="nav-logo">
-        <a><img :src="logoImg" alt="logo"></a>
+        <a ><img :src="logoImg" alt="logo" ></a>
       </div>
       <div id="nav-items">
         <ul>
           <li>
-            <router-link :to="{name: 'Home'}" class="router-link"  v-scroll-to="'#desktopNav'">Home</router-link>
+            <router-link :to="{name: 'Home'}" class="router-link"  v-scroll-to="'#home'">Home</router-link>
           </li>
 
           <li @click="toggleMenu=!toggleMenu">
@@ -16,6 +16,9 @@
           </li>
           <li @click="toggleMenu=!toggleMenu">
             <a class="button1"  v-scroll-to="'#projects'">Projects </a>
+          </li>
+          <li @click="toggleMenu=!toggleMenu">
+            <a class="button1"  v-scroll-to="'#contact'">Contact </a>
           </li>
           <!--          <li id="career-li">-->
           <!--            <router-link :to="{name: 'Portfolio'}" class="router-link  career" v-scroll-to="'#home-c'">Portfolio-->
@@ -92,9 +95,9 @@ export default {
     background: $bg-fill;
      #nav-logo {
       width: 35%;
-      padding: 20px;
+      padding-top: 20px;
       img {
-        width: 250px;
+        width: 150px;
         padding: 0;
         margin: 0;
       }
@@ -149,32 +152,83 @@ export default {
     }
   }
 }
-@media screen and (min-width: 820px) and (max-width: 1110px) {
+@media screen and (min-width: 820px) {
   #desktopNav {
+    z-index: 9999 !important;
+    .db {
+      background: white !important;
+      ul {
+        li {
+          a {
+            color: $headerColor !important ;
+          }
+          &:hover{
+            color: $textHighlight;
+          }
+        }
+      }
+    }
     .navbar {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      #nav-logo {
-        width: 10%;
-        padding: 20px;
-        grid-column-start: 1;
+
+
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      background: $bg-fill;
+       #nav-logo {
+        width: 35%;
+        padding-top: 20px;
+        img {
+          width: 150px;
+          padding: 0;
+          margin: 0;
+        }
       }
       #nav-items {
         margin: 0 auto;
-        width: 85%;
-        padding: 12px;
-        padding-top: 0px !important;
+        width: 65%;
+        display: flex;
         ul {
-          grid-column-start: 2;
-          text-align: end;
-          justify-content: end;
+          width: 80%;
+          margin: 0 auto;
           display: flex;
+          justify-content: space-around;
           li {
             display: inline-block;
             list-style: none;
-            justify-content: end;
             @include Button();
-            width: 120px;
+            width: 150px;
+            a {
+              color: $headerColor;
+              font-family: 'Poppins', sans-serif;
+              text-align: center;
+              cursor: pointer;
+              text-decoration: none;
+              &:hover {
+                text-decoration: none;
+                text-underline: none;
+                color: $textColor;
+              }
+            }
+            .router-link-active {
+              border-radius: 6px;
+              color: $textHighlight;
+            }
+            .router-link {
+              &:hover {
+                img {
+                  display: unset;
+                }
+              }
+            }
+            #career-li {
+              .career {
+                color: $textHighlight !important;
+              }
+              &:hover {
+                color: $textHighlight !important;
+              }
+            }
           }
         }
       }

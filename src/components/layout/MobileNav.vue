@@ -1,32 +1,32 @@
-
 <template>
   <div class="desktopNav">
-    <div class="menu" :class="{db: scrollPosition>800}">
+    <div class="menu">
       <div class="brandName">
-        <img :src="logoImg" alt="" width="160px;"></div>
-      <div class="contact"></div>
+        <img src="../../assets/Image/blueLogo.svg "/></div>
       <div class="menuIcon">
-        <img src="../../assets/Image/menus.svg" alt="hamburger" width="40" style="padding:10px; margin-right: 5px;"
+        <img src="../../assets/Image/menu-icon.png" alt="hamburger" width="40" style="padding:10px; margin-right: 5px;"
              v-on:click="toggleMenu =!toggleMenu">
       </div>
     </div>
     <div class="navBar" :class="{'expandMenu': !toggleMenu}">
       <div class="closeNavBar">
-        <img src="../../assets/Image/shutdown.svg" alt="" width="50" v-on:click="toggleMenu =!toggleMenu"
+        <img src="../../assets/Image/close-menu.png" alt="" width="40" v-on:click="toggleMenu =!toggleMenu"
              style="padding:10px;">
       </div>
       <div class="brandLogo"></div>
       <div class="navLinks">
         <ul>
           <li v-on:click="toggleMenu =!toggleMenu">
-            <router-link :to="{name: 'Home'}" class="router-link" >Home</router-link>
-          </li>
-
-          <li @click="toggleMenu=!toggleMenu">
-            <a class="button1" >About </a>
+            <router-link :to="{name: 'Home'}" class="router-link" v-scroll-to="'#home'">Home</router-link>
           </li>
           <li @click="toggleMenu=!toggleMenu">
-            <a class="button1">Projects </a>
+            <a class="button1"  v-scroll-to="'#services'" >About </a>
+          </li>
+          <li @click="toggleMenu=!toggleMenu">
+            <a class="button1"  v-scroll-to="'#projects'">Projects </a>
+          </li>
+          <li @click="toggleMenu=!toggleMenu">
+            <a class="button1"  v-scroll-to="'#contact'">Contact </a>
           </li>
           <!--          <li v-on:click="toggleMenu =!toggleMenu">-->
           <!--            <router-link :to="{name: 'Portfolio'}" class="router-link  career" v-scroll-to="'#home-c'">Portfolio-->
@@ -50,7 +50,7 @@ export default {
   name: "MobileNav",
   data() {
     return {
-      logoImg: require('../../assets/Image/white_logo.svg'),
+      logoImg: require('../../assets/Image/blueLogo.svg'),
       scrollPosition: null,
       toggleMenu: true,
     }
@@ -76,9 +76,11 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/Styles/colors";
+
 .desktopNav {
   display: none !important;
 }
+
 @keyframes slide-anim {
   0% {
     transform: translateY(150px);
@@ -87,18 +89,21 @@ export default {
     transform: rotateY(0);
   }
 }
-@media screen and (max-device-width: 667px) {
+
+
+@media all and (max-width: 1279px) {
   .desktopNav {
-    display: block !important;
+    display: block !important; ;
     position: fixed;
-    top: 0;
-    z-index: 9999;
+    z-index: 99999;
     width: 100%;
-    background: $headerColor;
-    //height: 10vh;
+    background: $bg_fill;
+
     font-family: 'Poppins', sans-serif;
+
     .db {
       background: #F1F2F6 !important;
+
       ul {
         li {
           a {
@@ -107,186 +112,63 @@ export default {
         }
       }
     }
+
     .menu {
       width: 100%;
-      display: flex;
+      display: flex !important;
       justify-content: space-between;
-      padding: 12px;
-      .contact {
-        display: none;
-      }
-      .openNavbar {
-        cursor: pointer;
-        top: 0;
-        right: 0;
-      }
+
       .brandName {
         text-align: start;
         padding: 0;
-        margin-left: 20px;
-        width: 100%;
+        width: 60%;
+
         img {
-          margin: 0;
+          margin-top: 15px;
+          margin-left: 15px;
           padding: 0;
+          width: 200px;
         }
       }
+
       .menuIcon {
         margin: 0;
-        width: 10%;
+        width: 30%;
+         cursor: pointer;
         text-align: end;
-        padding: 0;
-      }
+       }
     }
+
     .navBar {
-      height: 100%;
+      height: 100vh !important;
       position: fixed;
       z-index: 1;
       top: 0;
       right: 0;
-      background-color: $headerColor;
+      background-color: $bg_fill;
       overflow-x: hidden;
       transition: 0.9s;
       width: 0;
+
       .navLinks {
         position: relative;
         top: 25%;
         width: 100%;
         text-align: center;
         margin-top: 30px;
-        ul {
-          animation-name: slide-anim;
-          animation-duration: 4s;
-          li {
-            list-style: none;
-            a {
-              cursor: pointer;
-              padding: 8px;
-              text-decoration: none;
-              font-size: 16px;
-              display: block;
-              transition: 0.3s;
-              color: white;
-            }
-            .router-link-active {
-              border-radius: 6px;
-              color: #ED542C;
-              border-bottom: none !important;
-              padding: 8px;
-              &:hover {
-                color: $backgroundColor;
-              }
-            }
-            .career {
-              background: #ED542C !important;
-              border-radius: 6px;
-              padding: 6px;
-              color: $headerColor !important;
-              border: 2px solid #ED542C !important;
-              width: 40%;
-              margin: 0 auto;
-              img {
-                display: none;
-                width: 16px;
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-              }
-              &:hover {
-                img {
-                  display: inline;
-                }
-              }
-            }
-          }
-        }
-      }
-      .closeNavBar {
-        cursor: pointer;
-      }
-    }
-  }
-  .expandMenu {
-    width: 70% !important;
-  }
-}
-@media (max-width: 823px) {
-  .desktopNav {
-    display: block !important;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    width: 100%;
-    background: $headerColor;
-    //height: 10vh;
-    font-family: 'Poppins', sans-serif;
-    .db {
-      background: #F1F2F6 !important;
-      ul {
-        li {
-          a {
-            color: $headerColor !important;
-          }
-        }
-      }
-    }
-    .menu {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 12px;
-      .contact {
-        display: none;
-      }
-      .openNavbar {
-        cursor: pointer;
-        top: 0;
-        right: 0;
-      }
-      .brandName {
-        text-align: start;
-        padding: 0;
-        margin-left: 20px;
-        width: 100%;
-        img {
-          margin: 0;
-          padding: 0;
-        }
-      }
-      .menuIcon {
-        margin: 0;
-        width: 10%;
-        text-align: end;
-        padding: 0;
-        cursor: pointer;
-      }
-    }
-    .navBar {
-      height: 100%;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      right: 0;
-      background-color: $headerColor;
-      overflow-x: hidden;
-      transition: 0.9s;
-      width: 0;
-      .navLinks {
-        position: relative;
-        top: 25%;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
+
         ul {
           animation-name: slide-anim;
           animation-duration: 4s;
           text-align: center !important;
+
           li {
             list-style: none;
             justify-content: center;
             text-align: center !important;
             text-transform: uppercase;
             color: $white_text;
-            background: #0a1157;
+            background: $textColor;
             font-family: 'Poppins', sans-serif;
             width: 80%;
             letter-spacing: 2px;
@@ -294,6 +176,7 @@ export default {
             cursor: pointer;
             border-radius: 2rem;
             margin: 20px auto;
+
             a {
               cursor: pointer;
               padding: 8px;
@@ -304,14 +187,17 @@ export default {
               color: white;
               text-align: center !important;
             }
+
             .router-link-active {
               border-radius: 6px;
               color: $textHighlight;
               padding: 8px;
+
               &:hover {
-                color: $backgroundColor;
+                color: $textHighlight;
               }
             }
+
             .career {
               background: none !important;
               border: none !important;
@@ -321,6 +207,7 @@ export default {
           }
         }
       }
+
       .closeNavBar {
         cursor: pointer;
       }

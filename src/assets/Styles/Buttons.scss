@@ -65,6 +65,56 @@
     }
   }
 
+@mixin  responsiveButtons{
+  display: grid;
+grid-template-columns: 1fr;
+  border-radius: 2rem;
+  outline: none;
+  .cardContact {
+    border-radius: 2rem;
+    display: flex;
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid black;
+    justify-content: center;
+    padding: 10px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    img {
+      width: 0px;
+      height: 32px;
+      padding-left: 5px;
+      transition: width 1s;
+      transition-timing-function: ease;
+    }
+    &:hover {
+      width: 200px;
+      cursor: pointer;
+      -webkit-box-shadow: 0px -1px 12px 7px rgba(255, 255, 255, 1.0);
+      box-shadow: 0px -1px 12px 7px rgba(223, 228, 234, 1.0);
+      background: black;
+      color: white;
+      img {
+        width: 30px;
+      }
+      a {
+        color: white;
+      }
+
+    }
+  }
+  .ccCall {
+    background: black;
+    -webkit-box-shadow: 0px -1px 12px 7px rgba(255, 255, 255, 1.0);
+    box-shadow: 0px -1px 12px 7px rgba(223, 228, 234, 1.0);
+    a {
+      color: white;
+    }
+  }
+}
+
 @mixin intoText {
   padding: 30px;
 
