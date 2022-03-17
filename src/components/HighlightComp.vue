@@ -9,15 +9,8 @@
     <div class="slot_text">
       <p>{{ slot_text }} </p>
     </div>
+    <br>
     <hr>
-    <div class="slot_image">
-
-      <div class="slot_image">
-        <img src="https://img.icons8.com/ios-glyphs/000000/long-arrow-right.png" alt=""/>
-
-      </div>
-
-    </div>
 
   </div>
 
